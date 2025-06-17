@@ -51,11 +51,13 @@ src/
 ```bash
 git clone https://github.com/iamsharanshetty/Spring-Social_Media-API.git
 cd Spring-Social_Media-API
+```
 
-**2. Configure the database**
+2. **Configure the database**
 
 Configure PostgreSQL in application.properties:
 
+```bash
 spring.application.name=socials
 spring.datasource.driver-class-name = org.postgresql.Driver
 spring.datasource.url = jdbc:postgresql://localhost:5432/social_app_db
@@ -63,3 +65,24 @@ spring.datasource.username = postgres
 spring.datasource.password = Sharan@06
 spring.jpa.hibernate.ddl-auto = update
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+```
+
+## 📬 API Endpoints
+
+1. **Acoount API**
+
+| Method | Endpoint    | Description            |
+| ------ | ----------- | ---------------------- |
+| POST   | `/register` | Register a new user    |
+| POST   | `/login`    | Login and authenticate |
+
+
+2. **Message API**
+
+| Method | Endpoint         | Description               |
+| ------ | ---------------- | ------------------------- |
+| GET    | `/messages`      | Get all messages          |
+| GET    | `/messages/{id}` | Get a message by ID       |
+| POST   | `/messages`      | Create a new message      |
+| PATCH  | `/messages/{id}` | Update message text by ID |
+| DELETE | `/messages/{id}` | Delete a message by ID    |
