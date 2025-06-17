@@ -52,7 +52,7 @@ src/
 git clone https://github.com/iamsharanshetty/Spring-Social_Media-API.git
 cd Spring-Social_Media-API
 
-2. **Configure the database**
+**2. Configure the database**
 
 Configure PostgreSQL in application.properties:
 
