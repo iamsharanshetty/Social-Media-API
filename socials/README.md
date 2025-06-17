@@ -90,28 +90,34 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialec
 ## 🧪 Sample Test Payloads
 
 1. **User Registration**
+    <br>
     Open Postman and send a POST request 
+    <br>
     Make sure it's running at http://localhost:8080/register
     ```bash
-    {
-  "username": "user",
-  "password": "abcd1234"
-    }
+        {
+            "username": "user",
+            "password": "abcd1234"
+        }
     ```
 
 2. **User Login**
+    <br>
     Send a POST request
-        Make sure it's running at http://localhost:8080/login
+    <br>
+    Make sure it's running at http://localhost:8080/login
     ```bash
-    {
-  "username": "user",
-  "password": "abcd1234"
-    }
+        {
+             "username": "user",
+             "password": "abcd1234"
+        }
     ```
 
 3. **Creation of new messages**
-     Send a POST request
-        Make sure it's running at http://localhost:8080/messages
+        <br>
+    Send a POST request
+     <br>
+    Make sure it's running at http://localhost:8080/messages
     ```bash
         {
             "messageText": "Hello, this is my first message",
@@ -121,8 +127,10 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialec
     ```   
 
 4. **Update a message text identified by a message ID**
-     Send a PATCH request
-        Make sure it's running at http://localhost:8080/messages/1
+    <br>
+    Send a PATCH request
+    <br>
+    Make sure it's running at http://localhost:8080/messages/1
     ```bash
             {
                  "messageText": "Updated message content"
