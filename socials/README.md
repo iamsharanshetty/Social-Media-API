@@ -27,7 +27,7 @@ A backend RESTful API built with Spring Boot for a social media application. It 
 
 ---
 
-## 📂 Project Structure
+<!-- ## 📂 Project Structure
 
 src/
 ├── main/
@@ -42,7 +42,7 @@ src/
 ├── test/
 
 
----
+--- -->
 
 ## 🔧 Setup Instructions
 
@@ -86,3 +86,60 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialec
 | POST   | `/messages`      | Create a new message      |
 | PATCH  | `/messages/{id}` | Update message text by ID |
 | DELETE | `/messages/{id}` | Delete a message by ID    |
+
+## 🧪 Sample Test Payloads
+
+1. **User Registration**
+    Open Postman and send a POST request 
+    Make sure it's running at http://localhost:8080/register
+    ```bash
+    {
+  "username": "user",
+  "password": "abcd1234"
+    }
+    ```
+
+2. **User Login**
+    Send a POST request
+        Make sure it's running at http://localhost:8080/login
+    ```bash
+    {
+  "username": "user",
+  "password": "abcd1234"
+    }
+    ```
+
+3. **Creation of new messages**
+     Send a POST request
+        Make sure it's running at http://localhost:8080/messages
+    ```bash
+        {
+            "messageText": "Hello, this is my first message",
+            "accountId": 1
+        }
+
+    ```   
+
+4. **Update a message text identified by a message ID**
+     Send a PATCH request
+        Make sure it's running at http://localhost:8080/messages/1
+    ```bash
+            {
+                 "messageText": "Updated message content"
+            }
+
+
+    ```   
+
+## 🧠 Future Enhancements
+<ul>
+<li> JWT-based Authentication
+
+<li> Like and comment system
+
+<li> Follow/Unfollow users
+
+<li> Media upload support
+
+
+</ul>
